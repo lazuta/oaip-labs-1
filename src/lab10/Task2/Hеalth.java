@@ -1,6 +1,6 @@
 package lab10.Task2;
 
-public class Hеalth {
+public class Hеalth implements iHealth {
     protected String nameOrg;
     protected String adress;
     protected double budget;
@@ -19,8 +19,9 @@ public class Hеalth {
         return nameOrg;
     }
 
-    public void setNameOrg(String nameOrg) {
+    public String setNameOrg(String nameOrg) {
         this.nameOrg = nameOrg;
+        return nameOrg;
     }
 
     public String getAdress() {
@@ -59,7 +60,7 @@ public class Hеalth {
         return budget - (budget / countPeople) * newNds;
     }
 
-    protected String message() {
+    public String message() {
         return "Адрес: " + adress;
     }
 

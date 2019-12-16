@@ -1,4 +1,4 @@
-package lab10.Task2;
+package lab11.Otehr;
 
 public class Hospital extends Hеalth {
     protected String nameOrg;
@@ -70,7 +70,7 @@ public class Hospital extends Hеalth {
     }
 
     @Override
-    double NDS() {
+    public double NDS() {
         return super.NDS();
     }
 
@@ -80,7 +80,7 @@ public class Hospital extends Hеalth {
     }
 
     @Override
-    protected String message() {
+    public String message() {
         return super.message();
     }
 

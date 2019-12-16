@@ -29,8 +29,9 @@ public class Sanitary extends Hеalth {
     }
 
     @Override
-    public void setNameOrg(String nameOrg) {
+    public String setNameOrg(String nameOrg) {
         this.nameOrg = nameOrg;
+        return nameOrg;
     }
 
     @Override

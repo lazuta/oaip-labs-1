@@ -1,21 +1,21 @@
-package lab10.Task2;
+package lab11.Otehr;
 
-public class Hospital extends Hеalth {
+public class Sanitary extends Hеalth {
     protected String nameOrg;
     protected String adress;
     protected double budget;
     protected int countPeople;
 
-    public Hospital() {}
+    public Sanitary() {}
 
-    public Hospital(String nameOrg, String adress, double budget, int countPeople) {
+    public Sanitary(String nameOrg, String adress, double budget, int countPeople) {
         this.nameOrg = nameOrg;
         this.adress = adress;
         this.budget = budget;
         this.countPeople = countPeople;
     }
 
-    public Hospital(String nameOrg, String adress, double budget, int countPeople, String nameOrg1, String adress1, double budget1, int countPeople1) {
+    public Sanitary(String nameOrg, String adress, double budget, int countPeople, String nameOrg1, String adress1, double budget1, int countPeople1) {
         super(nameOrg, adress, budget, countPeople);
         this.nameOrg = nameOrg1;
         this.adress = adress1;
@@ -65,12 +65,12 @@ public class Hospital extends Hеalth {
     }
 
     @Override
-    protected double SawingBudget() {
+    public double SawingBudget() {
         return super.SawingBudget();
     }
 
     @Override
-    double NDS() {
+    public double NDS() {
         return super.NDS();
     }
 
@@ -80,7 +80,7 @@ public class Hospital extends Hеalth {
     }
 
     @Override
-    protected String message() {
+    public String message() {
         return super.message();
     }
 

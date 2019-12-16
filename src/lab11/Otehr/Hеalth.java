@@ -1,97 +1,77 @@
-package lab10.Task2;
+package lab11.Otehr;
 
-public class Hospital extends Hеalth {
+import lab11.Intterface.iHealth;
+
+public class Hеalth implements iHealth {
     protected String nameOrg;
     protected String adress;
     protected double budget;
     protected int countPeople;
 
-    public Hospital() {}
+    public Hеalth() {}
 
-    public Hospital(String nameOrg, String adress, double budget, int countPeople) {
+    public Hеalth(String nameOrg, String adress, double budget, int countPeople) {
         this.nameOrg = nameOrg;
         this.adress = adress;
         this.budget = budget;
         this.countPeople = countPeople;
     }
 
-    public Hospital(String nameOrg, String adress, double budget, int countPeople, String nameOrg1, String adress1, double budget1, int countPeople1) {
-        super(nameOrg, adress, budget, countPeople);
-        this.nameOrg = nameOrg1;
-        this.adress = adress1;
-        this.budget = budget1;
-        this.countPeople = countPeople1;
-    }
-
-    @Override
     public String getNameOrg() {
         return nameOrg;
     }
 
-    @Override
     public String setNameOrg(String nameOrg) {
         this.nameOrg = nameOrg;
         return nameOrg;
     }
 
-    @Override
     public String getAdress() {
         return adress;
     }
 
-    @Override
     public void setAdress(String adress) {
         this.adress = adress;
     }
 
-    @Override
     public double getBudget() {
         return budget;
     }
 
-    @Override
     public void setBudget(double budget) {
         this.budget = budget;
     }
 
-    @Override
     public int getCountPeople() {
         return countPeople;
     }
 
-    @Override
     public void setCountPeople(int countPeople) {
         this.countPeople = countPeople;
     }
 
-    @Override
     protected double SawingBudget() {
-        return super.SawingBudget();
+        return budget / countPeople;
     }
 
-    @Override
-    double NDS() {
-        return super.NDS();
+    public double NDS() {
+        return budget - (budget / countPeople) * 0.2;
     }
 
-    @Override
     protected double NDS(double newNds) {
-        return super.NDS(newNds);
+        return budget - (budget / countPeople) * newNds;
     }
 
-    @Override
-    protected String message() {
-        return super.message();
+    public String message() {
+        return "Адрес: " + adress;
     }
 
-    @Override
     protected String message(String mess) {
-        return super.message(mess);
+        return mess;
     }
 
-    @Override
     protected String message(String mess, String mes2) {
-        return super.message(mess, mes2);
+        return mess + " " + mes2;
     }
 
     @Override
